@@ -38,14 +38,13 @@ export const PROJECTS = [
     ],
     impact:
       "Reduced bounce rate and increased conversion by 500bps. CTR gains of 250–366% across campaigns.",
-    grid: "grid gap-4 sm:grid-cols-2 lg:grid-cols-3",
+    grid: "grid gap-4 sm:grid-cols-2",
     aspect: "aspect-[3/4]",
     media: [
-      { type: "video", src: "/media/45ntxuwu_1-onsitestores-a.mp4", label: "1-onsitestores-a" },
-      { type: "video", src: "/media/ekc9s85d_1-onsitestores-b.mp4", label: "1-onsitestores-b" },
-      { type: "placeholder", label: "1-onsitestores-c" },
-      { type: "placeholder", label: "1-onsitestores-d" },
-      { type: "placeholder", label: "1-onsitestores-e" },
+      { type: "video", src: "/media/45ntxuwu_1-onsitestores-a.mp4", poster: "/media/posters/onsite-a.jpg", label: "1-onsitestores-a" },
+      { type: "video", src: "/media/ekc9s85d_1-onsitestores-b.mp4", poster: "/media/posters/onsite-b.jpg", label: "1-onsitestores-b" },
+      { type: "video", src: "/media/vk14x4iq_1-onsitestores-c.mp4", poster: "/media/posters/onsite-c.jpg", label: "1-onsitestores-c" },
+      { type: "video", src: "/media/oo61x4u1_1-onsitestores-d.mp4", poster: "/media/posters/onsite-d.jpg", label: "1-onsitestores-d" },
     ],
   },
   {
@@ -65,7 +64,7 @@ export const PROJECTS = [
     aspect: "aspect-[4/3]",
     media: [
       { type: "image", src: `${ASSET_BASE_A}/vjiusvgx_2-onset-bts-a.png`, label: "2-onset-bts-a" },
-      { type: "image", src: `${ASSET_BASE_B}/um946wyj_2-onset-bts-b.png`, label: "2-onset-bts-b" },
+      { type: "image", src: `${ASSET_BASE_B}/um946wyj_2-onset-bts-b.png`, label: "2-onset-bts-b", position: "object-top" },
       { type: "youtube", src: yt("kGli_grpDVE"), label: "Launch film" },
       { type: "youtube", src: yt("09xZPtZlV_s"), label: "Launch film" },
       { type: "youtube", src: yt("nAG6yyFEEH8"), label: "Launch film" },
@@ -88,10 +87,10 @@ export const PROJECTS = [
     grid: "grid gap-4 sm:grid-cols-2",
     aspect: "aspect-[3/4]",
     media: [
-      { type: "video", src: "/media/w8wxgvix_3-serve-landingpage-a.mp4", label: "3-serve-landingpage-a" },
+      { type: "video", src: "/media/w8wxgvix_3-serve-landingpage-a.mp4", poster: "/media/posters/serve-a.jpg", label: "3-serve-landingpage-a" },
       { type: "placeholder", label: "3-serve-landingpage-b" },
       { type: "image", src: `${ASSET_BASE_B}/5jd759o5_3-serve-landingpage-c.jpg`, label: "3-serve-landingpage-c" },
-      { type: "placeholder", label: "3-serve-landingpage-d" },
+      { type: "image", src: `${ASSET_BASE_B}/qnpvfdcd_3-serve-landingpage-d.jpg`, label: "3-serve-landingpage-d" },
     ],
   },
   {
@@ -111,7 +110,7 @@ export const PROJECTS = [
     aspect: "aspect-[16/10]",
     media: [
       { type: "image", src: `${ASSET_BASE_B}/e6hg8rpr_4-myntra-a.png`, label: "4-myntra-a" },
-      { type: "placeholder", label: "4-myntra-b" },
+      { type: "image", src: `${ASSET_BASE_B}/d6uj4f12_4-myntra-b.jpg`, label: "4-myntra-b", position: "object-top" },
     ],
   },
   {
@@ -132,7 +131,7 @@ export const PROJECTS = [
     aspect: "aspect-[4/3]",
     media: [
       { type: "image", src: `${ASSET_BASE_A}/u7on7pra_5-social-a.webp`, label: "5-social-a" },
-      { type: "placeholder", label: "5-social-b" },
+      { type: "image", src: `${ASSET_BASE_B}/6gi41qob_5-social-b.webp`, label: "5-social-b" },
       {
         type: "link",
         src: "https://www.instagram.com/reel/DAvoLpFpSb9/?utm_source=ig_web_button_share_sheet",
@@ -144,6 +143,7 @@ export const PROJECTS = [
         src: "https://www.gqindia.com/promotion/amazon-fashion-diwali-bash-hosted-for-content-creators-as-part-of-the-great-indian-festival-2024",
         label: "GQ India Feature",
         sub: "Amazon Fashion Diwali Bash",
+        thumb: "/media/gq-diwali-bash.jpg",
       },
     ],
   },

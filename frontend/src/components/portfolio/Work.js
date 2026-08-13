@@ -1,4 +1,5 @@
-import { ArrowUpRight, Image as ImageIcon } from "lucide-react";
+import { useRef, useState } from "react";
+import { ArrowUpRight, Image as ImageIcon, Instagram, Play } from "lucide-react";
 import { Reveal, SectionHeading } from "@/components/portfolio/Reveal";
 import { PROJECTS } from "@/data/content";
 
@@ -17,44 +18,89 @@ const PlaceholderSlot = ({ label, aspect, testid }) => (
   </div>
 );
 
+const VideoTile = ({ item, aspect, testid }) => {
+  const ref = useRef(null);
+  const [playing, setPlaying] = useState(false);
+
+  const play = () => {
+    ref.current?.play();
+    setPlaying(true);
+  };
+
+  return (
+    <div
+      className={`group relative overflow-hidden rounded-md border border-line bg-ink/5 ${aspect}`}
+    >
+      <video
+        ref={ref}
+        src={item.src}
+        poster={item.poster}
+        data-testid={testid}
+        preload="none"
+        playsInline
+        controls={playing}
+        onClick={playing ? undefined : play}
+        className="h-full w-full object-cover"
+      />
+      {!playing && (
+        <button
+          type="button"
+          onClick={play}
+          aria-label={`Play ${item.label}`}
+          data-testid={`${testid}-play`}
+          className="absolute inset-0 flex items-center justify-center"
+        >
+          <span className="flex h-14 w-14 items-center justify-center rounded-full bg-cream/90 shadow-md transition-transform duration-300 group-hover:scale-110">
+            <Play size={20} className="ml-0.5 text-plum" fill="currentColor" />
+          </span>
+        </button>
+      )}
+    </div>
+  );
+};
+
 const LinkCard = ({ item, aspect, testid }) => (
   <a
     href={item.src}
     target="_blank"
     rel="noopener noreferrer"
     data-testid={testid}
-    className={`group flex flex-col justify-between rounded-md border border-line bg-white p-5 transition-colors duration-300 hover:border-plum/50 hover:bg-plum-light/40 ${aspect}`}
+    className={`group flex flex-col overflow-hidden rounded-md border border-line bg-white transition-colors duration-300 hover:border-plum/50 ${aspect}`}
   >
-    <ArrowUpRight
-      size={22}
-      className="text-plum transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
-    />
-    <div>
-      <p className="font-serif text-xl leading-snug tracking-tight">
-        {item.label}
-      </p>
-      <p className="mt-2 text-[11px] font-medium uppercase tracking-[0.2em] text-muted">
-        {item.sub}
-      </p>
+    <div className="relative min-h-0 flex-1 overflow-hidden">
+      {item.thumb ? (
+        <img
+          src={item.thumb}
+          alt={item.label}
+          loading="lazy"
+          className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+        />
+      ) : (
+        <div className="flex h-full items-center justify-center bg-plum-light/60">
+          <Instagram size={30} className="text-plum" />
+        </div>
+      )}
+    </div>
+    <div className="flex items-center justify-between gap-3 p-4">
+      <div>
+        <p className="font-serif text-lg leading-snug tracking-tight">
+          {item.label}
+        </p>
+        <p className="mt-1 text-[10px] font-medium uppercase tracking-[0.2em] text-muted">
+          {item.sub}
+        </p>
+      </div>
+      <ArrowUpRight
+        size={20}
+        className="shrink-0 text-plum transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
+      />
     </div>
   </a>
 );
 
 const MediaItem = ({ item, aspect, testid }) => {
-  if (item.type === "video") {
-    return (
-      <video
-        src={item.src}
-        data-testid={testid}
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="metadata"
-        className={`w-full rounded-md border border-line bg-ink/5 object-cover ${aspect}`}
-      />
-    );
-  }
+  if (item.type === "video")
+    return <VideoTile item={item} aspect={aspect} testid={testid} />;
   if (item.type === "image") {
     return (
       <div
@@ -65,7 +111,9 @@ const MediaItem = ({ item, aspect, testid }) => {
           alt={item.label}
           data-testid={testid}
           loading="lazy"
-          className="h-full w-full object-cover transition-transform duration-700 ease-out hover:scale-105"
+          className={`h-full w-full object-cover transition-transform duration-700 ease-out hover:scale-105 ${
+            item.position || ""
+          }`}
         />
       </div>
     );

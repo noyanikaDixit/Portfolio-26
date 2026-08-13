@@ -29,15 +29,19 @@ Minimal, editorial one-page portfolio for a creative strategist ("more design st
 - Project 2: 4 working YouTube embeds; Project 5: Instagram + GQ India link cards; Project 4: Impact section removed (no metrics yet)
 - About: pull-quote, bio, two education lines (NIFT MFM + Amity BJMC), working Download Resume button (PDF in /public/media)
 - Contact: real details — noyanikadixit@gmail.com, +91-8795790773, linkedin.com/in/noyanika-dixit-258bb815b
+- Videos: click-to-play tiles with extracted first-frame posters (/public/media/posters/), no autoplay
+- Project galleries fully populated except 3-serve-landingpage-b (P1 now 2x2 video grid; P2 bts-b uses object-top so faces show; P3 has TV creative + app screenshot; P4 has both Myntra creatives; P5 has both event photos + GQ og-image thumbnail card + Instagram icon card)
+- OG/Twitter share card generated (1200x630 plum-cream, /public/og-image.jpg) + meta tags in index.html
+- Hero masked-reveal descender clipping fixed (pb 0.25em)
 - Thin plum scroll-progress bar under nav (framer-motion useScroll + scaleX)
 - Mobile: hamburger menu, 2x2 stat grid, stacked layouts — verified
 - Videos served locally from /public/media (H.264, portrait, verified)
 
 ## Backlog
-- P0: Remaining image uploads (1-onsitestores c–e, 3-serve b & d, 4-myntra-b, 5-social-b) — slots labeled and ready
+- P1: 3-serve-landingpage-b image upload (last remaining placeholder)
+- P1: Instagram reel thumbnail — IG blocks scraping; current card uses an Instagram icon on plum; replace with a real still if user uploads one
 - P1: Myntra (Project 4) impact metrics once shareable
-- P2: OpenGraph/social share image, favicon
-- P2: Instagram native embed (oEmbed) instead of link card
+- P2: favicon
 
 ## Test Credentials
 - No auth — see /app/memory/test_credentials.md (empty by design)

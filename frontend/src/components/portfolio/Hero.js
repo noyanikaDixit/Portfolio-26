@@ -4,7 +4,7 @@ import { HEADSHOT, STATS } from "@/data/content";
 const MaskedLine = ({ children, delay = 0 }) => (
   <span className="block overflow-hidden">
     <motion.span
-      className="block pb-[0.14em] -mb-[0.14em]"
+      className="block pb-[0.25em] -mb-[0.25em]"
       initial={{ y: "110%" }}
       animate={{ y: 0 }}
       transition={{ duration: 1.1, delay, ease: [0.16, 1, 0.3, 1] }}
@@ -46,7 +46,7 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 1.05, ease: [0.16, 1, 0.3, 1] }}
-          className="mx-auto mt-8 max-w-2xl font-serif text-xl italic leading-snug text-ink md:text-2xl"
+          className="mx-auto mt-10 max-w-2xl font-serif text-xl italic leading-snug text-ink md:text-2xl"
         >
           Curious mind. Creative instinct. A soft spot for turning good ideas
           into things people remember.
