@@ -1,0 +1,147 @@
+const ASSET_BASE =
+  "https://customer-assets-39nsmqrw.emergentagent.net/job_2ba8fcc9-1ae8-4409-bf1e-9e9e6680a45f/artifacts";
+
+export const HEADSHOT = `${ASSET_BASE}/2x39vmio_headshot-hero-section.webp`;
+
+export const STATS = [
+  { value: "170%", label: "CTR lift" },
+  { value: "500bps", label: "Conversion increase" },
+  { value: "3x", label: "Organic content growth" },
+  { value: "2", label: "Awards at Amazon" },
+];
+
+export const MARQUEE_WORDS = [
+  "Brand Strategy",
+  "Content",
+  "Conversion",
+  "Storytelling",
+  "Research",
+  "Campaigns",
+];
+
+const yt = (id) => `https://www.youtube-nocookie.com/embed/${id}`;
+
+export const PROJECTS = [
+  {
+    id: "onsite-stores",
+    number: "01",
+    title: "Designing for Discovery: Onsite Product Stores",
+    tag: "Product Narrative & Conversion Strategy — Amazon Fashion",
+    body: "Built a portfolio of category-led onsite stores, including Sneaker Street, Premium Edit, Wedding Store, and Festive Store, translating consumer research directly into store experience, content, and merchandising. Each store was built around a specific customer need: from footwear discovery to premium brand storytelling to seasonal shopping moments.",
+    roles: [
+      "Research & Insight",
+      "UX & Content Direction",
+      "Cross-Category Strategy",
+      "Performance Analysis",
+    ],
+    impact:
+      "Reduced bounce rate and increased conversion by 500bps. CTR gains of 250–366% across campaigns.",
+    media: [
+      { type: "video", src: "/media/45ntxuwu_1-onsitestores-a.mp4", label: "1-onsitestores-a" },
+      { type: "placeholder", label: "1-onsitestores-b" },
+      { type: "placeholder", label: "1-onsitestores-c" },
+      { type: "placeholder", label: "1-onsitestores-d" },
+      { type: "placeholder", label: "1-onsitestores-e" },
+    ],
+  },
+  {
+    id: "on-set",
+    number: "02",
+    title: "On Set: Production, Styling & Scripting",
+    tag: "Production Coordination — Amazon Fashion",
+    body: "Coordinated with production, styling, and photography teams across 21+ editorial shoots and 15+ onsite activations, from mood board & scripting to styling. Scripted influencer and talent-led content for major launches, and led on-ground creative direction for brand events.",
+    roles: [
+      "Production & Styling Coordination",
+      "Scriptwriting",
+      "On-Ground Creative Direction",
+      "Talent Coordination",
+    ],
+    impact: "21+ shoots and 15+ live activations led end-to-end.",
+    media: [
+      { type: "image", src: `${ASSET_BASE}/vjiusvgx_2-onset-bts-a.png`, label: "2-onset-bts-a" },
+      { type: "placeholder", label: "2-onset-bts-b" },
+      { type: "youtube", src: yt("kGli_grpDVE"), label: "Launch film" },
+      { type: "youtube", src: yt("09xZPtZlV_s"), label: "Launch film" },
+      { type: "youtube", src: yt("nAG6yyFEEH8"), label: "Launch film" },
+      { type: "youtube", src: yt("k6wOkz0q6wQ"), label: "Launch film" },
+    ],
+  },
+  {
+    id: "serve",
+    number: "03",
+    title: "Serve — Amazon Fashion's Gen Z Platform",
+    tag: "0→1 Brand & Platform Build — Amazon Fashion",
+    body: "Amazon Fashion had no dedicated space for its fastest-growing customer segment - Gen Z, over 45% of active buyers. I led the 0-to-1 strategy for Serve: commissioned primary and secondary research into how Gen Z actually shops and speaks, then built the brand name, voice, brand book, platform experience, and content ecosystem end to end — extending it across social, CRM, creator content, and cross-platform placements like Hip Hop India.",
+    roles: [
+      "Naming & Brand Strategy",
+      "Primary Research",
+      "Wireframe & Content Direction",
+      "Social & CRM Extension",
+    ],
+    impact: "2X engagement, +40% OPS, +170% CTR.",
+    media: [
+      { type: "video", src: "/media/w8wxgvix_3-serve-landingpage-a.mp4", label: "3-serve-landingpage-a" },
+      { type: "placeholder", label: "3-serve-landingpage-b" },
+      { type: "placeholder", label: "3-serve-landingpage-c" },
+      { type: "placeholder", label: "3-serve-landingpage-d" },
+    ],
+  },
+  {
+    id: "myntra",
+    number: "04",
+    title: "Myntra — Owning Festival & Sale Content Strategy",
+    tag: "Content Strategy Lead — Myntra (Current)",
+    body: "Leading content strategy and communication for Myntra's major fashion events and commercial moments, including the Myntra Big Fashion Festival, translating business goals and consumer insight into campaign narratives, messaging, and onsite experiences. Also lead CRM content strategy across customer segments, tailoring communication by audience, journey stage, and business objective.",
+    roles: [
+      "Content Strategy",
+      "Campaign Narrative",
+      "CRM Messaging",
+      "Cross-Functional Alignment",
+    ],
+    impact: "Impact metrics coming soon — this work is currently in-market.",
+    media: [
+      { type: "placeholder", label: "4-myntra-a" },
+      { type: "placeholder", label: "4-myntra-b" },
+    ],
+  },
+  {
+    id: "social-crm",
+    number: "05",
+    title: "Social, CRM & Brand Communication — Turning Content Into Numbers",
+    tag: "Social Strategy, CRM & PR — Amazon Fashion",
+    body: "Owned organic social strategy end to end, scripting, shooting, and posting from a phone, chasing trends before they cooled, and turning brand moments into scroll-stopping content. Extended that same insight-led approach into CRM messaging, PR storytelling, and on-ground brand experiences like Amazon Diwali Bash and Amazon Creator Connect, plus creative copy for limited-edition packaging.",
+    roles: [
+      "Social Strategy & Content",
+      "CRM Messaging",
+      "PR Writing",
+      "Brand Event Execution",
+    ],
+    impact:
+      "Organic content views grew 3x (avg 8K → 30K). Social engagement tripled in H2'24 (262 → 803). Creative brief compliance improved from 55.86% to 98.6%.",
+    media: [
+      { type: "image", src: `${ASSET_BASE}/u7on7pra_5-social-a.webp`, label: "5-social-a" },
+      { type: "placeholder", label: "5-social-b" },
+      {
+        type: "link",
+        src: "https://www.instagram.com/reel/DAvoLpFpSb9/?utm_source=ig_web_button_share_sheet",
+        label: "Instagram Reel",
+        sub: "Watch on Instagram",
+      },
+      {
+        type: "link",
+        src: "https://www.gqindia.com/promotion/amazon-fashion-diwali-bash-hosted-for-content-creators-as-part-of-the-great-indian-festival-2024",
+        label: "GQ India Feature",
+        sub: "Amazon Fashion Diwali Bash",
+      },
+    ],
+  },
+];
+
+export const ABOUT_TEXT =
+  "I've spent the last seven years figuring out what makes people stop scrolling and actually buy something, first at Amazon Fashion, now at Myntra. Give me a pile of research and a blank page and I'm genuinely happy. I've named a brand, written its first words, argued for its layout, and then shown up on set to make sure the shoot matched the idea in my head. I like the messy middle part of building something new more than the polished end of it. Also, I will absolutely notice if your product page copy doesn't match your Instagram caption. It's a whole personality trait at this point.";
+
+export const CONTACT_LINKS = [
+  { label: "Email", value: "your.email@example.com", href: "mailto:your.email@example.com", testid: "contact-email-link" },
+  { label: "Phone", value: "+91 00000 00000", href: "tel:+910000000000", testid: "contact-phone-link" },
+  { label: "LinkedIn", value: "linkedin.com/in/your-profile", href: "https://linkedin.com/in/your-profile", testid: "contact-linkedin-link" },
+];

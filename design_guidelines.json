@@ -1,0 +1,98 @@
+{
+  "theme": "light",
+  "typography": {
+    "headings": "'Playfair Display', serif",
+    "body": "'Inter', sans-serif",
+    "scale": {
+      "h1": "text-6xl md:text-8xl lg:text-[140px] leading-[0.9] tracking-tighter font-serif",
+      "h2": "text-4xl md:text-6xl lg:text-7xl leading-tight tracking-tight font-serif",
+      "h3": "text-2xl md:text-3xl lg:text-4xl font-serif",
+      "body": "text-base md:text-lg leading-relaxed font-sans text-gray-800",
+      "labels": "text-xs md:text-sm uppercase tracking-[0.2em] font-sans font-medium"
+    },
+    "imports": "@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');"
+  },
+  "colors": {
+    "background": "#FDFBF7",
+    "text": "#111111",
+    "accent": "#4A0E4E",
+    "secondaryText": "#555555",
+    "border": "#E5E5E5"
+  },
+  "layouts": {
+    "grid": "Bento Grid Protocol A (Asymmetrical)",
+    "container": "max-w-[1600px] mx-auto px-6 md:px-12",
+    "spacing": "Generous spacing. py-24 md:py-40 for major sections."
+  },
+  "motion": {
+    "libraries": [
+      "framer-motion",
+      "@studio-freight/lenis",
+      "react-fast-marquee"
+    ],
+    "hero": "Masked line-by-line text reveal on load using Framer Motion (initial y: 100%, animate y: 0, overflow hidden on parent).",
+    "scroll": "Staggered scroll-in fade animations. 1 subtle parallax moment for large project galleries using useScroll and useTransform.",
+    "marquee": "Slow editorial marquee strip with accent text looping seamlessly."
+  },
+  "sections": [
+    {
+      "name": "Header/Navigation",
+      "details": "Sticky/Fixed top navigation, glassmorphism background (`backdrop-blur-xl bg-[#FDFBF7]/80`). Left: Logo/Name. Right: Anchor Links (Home, Work, About, Contact). DO NOT use fully transparent background."
+    },
+    {
+      "name": "Hero",
+      "details": "Large kinetic typography. Heading 'Noyanika Dixit'. Subheadline 'Creative Strategist — Brand, Content & Conversion'. 60-word intro. Circular/soft-edged headshot image. Stat bar at the bottom: 4 columns separated by 1px borders. Big bold numbers, small uppercase labels (e.g., '170% CTR LIFT')."
+    },
+    {
+      "name": "Marquee",
+      "details": "Continuous scrolling text strip ('Brand, Content & Conversion') using react-fast-marquee. Very slow drift, elegant serif font, separated by bullet dots."
+    },
+    {
+      "name": "Selected Work",
+      "details": "Numbered manifesto-style chapter heading ('01 / Selected Work'). 5 editorial project cards stacked vertically with generous padding between them. Each card: Large hero image (subtle parallax), Title (Playfair Display), one-line category tag (Deep Plum), body paragraph, 'Role' list (comma separated), highlighted 'Impact' line in Deep Plum with real numbers."
+    },
+    {
+      "name": "About",
+      "details": "Numbered heading ('02 / About'). Split layout: Left column with a secondary image or whitespace, Right column with personal paragraph, education line ('NIFT, MFM'), and a 'Download Resume' solid button in Deep Plum (#4A0E4E)."
+    },
+    {
+      "name": "Contact",
+      "details": "Numbered heading ('03 / Contact'). Massive heading 'Let's Build Something'. Centered minimal text links for Email, Phone, LinkedIn."
+    }
+  ],
+  "visual_enhancers": {
+    "images": "Spotlight treatment, clipped frames (sharp or very slight radius, e.g., rounded-md). High-quality editorial crops.",
+    "borders": "1px solid #E5E5E5 for dividers, stat bars, and structural separations.",
+    "buttons": "Sharp rectangular or pill-shaped. Background #4A0E4E, text white, smooth hover states (darken background or slight scale)."
+  },
+  "image_urls": {
+    "headshot": "https://images.pexels.com/photos/29768364/pexels-photo-29768364.jpeg",
+    "project1": "https://images.unsplash.com/photo-1715559522419-db7face19c1c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwzfHxmYXNoaW9uJTIwc3R1ZGlvJTIwcGhvdG9zaG9vdHxlbnwwfHx8fDE3ODY2MzU3MTZ8MA&ixlib=rb-4.1.0&q=85",
+    "project2": "https://images.unsplash.com/photo-1536293283170-b4604bbe272f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwxfHxmYXNoaW9uJTIwc3R1ZGlvJTIwcGhvdG9zaG9vdHxlbnwwfHx8fDE3ODY2MzU3MTZ8MA&ixlib=rb-4.1.0&q=85",
+    "project3": "https://images.unsplash.com/photo-1670092473608-47d146ea71b4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwyfHx5b3V0aCUyMHN0cmVldHdlYXIlMjBmYXNoaW9ufGVufDB8fHx8MTc4NjYzNTcxNnww&ixlib=rb-4.1.0&q=85",
+    "project4": "https://images.unsplash.com/photo-1583878448938-0de973eec3b9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNDR8MHwxfHNlYXJjaHwyfHxpbmRpYW4lMjBmZXN0aXZhbCUyMGNsb3RoaW5nfGVufDB8fHx8MTc4NjYzNTcxNnww&ixlib=rb-4.1.0&q=85",
+    "project5": "https://images.unsplash.com/photo-1549298222-1c31e8915347?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwxfHxmYXNoaW9uJTIwbWFnYXppbmUlMjBsYXlvdXR8ZW58MHx8fHwxNzg2NjM1NzE2fDA&ixlib=rb-4.1.0&q=85"
+  },
+  "instructions_to_main_agent": [
+    "Install and use `@studio-freight/lenis` (or `lenis`), `framer-motion`, `react-fast-marquee`, and `lucide-react`.",
+    "DO NOT use TypeScript. Write purely in JavaScript (`.js` or `.jsx` depending on the build setup, but keep strictly to valid JS).",
+    "Add the Google Fonts import provided in the typography section to your main `index.css`.",
+    "Implement Lenis smooth scrolling inside a useEffect at the root component level.",
+    "Use data-testid attributes on all interactive and informational elements for testing.",
+    "The hero section title MUST use Framer Motion for a line-by-line reveal animation.",
+    "Ensure 'Deep Plum' (#4A0E4E) is the ONLY accent color used (for tags, specific highlighted numbers, and buttons). Everything else should be monochrome/cream.",
+    "Do NOT center text globally. Use left-alignment for body and layout structure. Only center things when explicitly requested (like the contact links)."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Do not use dark colors as gradients.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur) where needed, but never use fully transparent backgrounds for overlays.",
+    "DO NOT apply universal transition (e.g., transition: all). Add transitions to specific properties like opacity, transform, background-color.",
+    "DO NOT add `.App { text-align: center; }`.",
+    "Always use modern button styles (pill-shaped or sharp) with interaction animations.",
+    "NEVER use placeholder AI assistant emojis for icons.",
+    "Every interaction needs micro-animations (hover states, transitions).",
+    "Use 2-3x more spacing than feels comfortable.",
+    "NEVER use placeholder text for missing images/logos."
+  ]
+}
