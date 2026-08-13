@@ -30,6 +30,9 @@ export const Contact = () => (
               href={l.href}
               data-testid={l.testid}
               className="group"
+              {...(l.label === "LinkedIn"
+                ? { target: "_blank", rel: "noopener noreferrer" }
+                : {})}
             >
               <p className="text-[11px] font-medium uppercase tracking-[0.25em] text-muted">
                 {l.label}
@@ -40,10 +43,6 @@ export const Contact = () => (
             </a>
           ))}
         </div>
-        <p className="mt-12 text-xs text-muted">
-          Contact details above are placeholders — share your email, phone and
-          LinkedIn and I&rsquo;ll update them.
-        </p>
       </Reveal>
     </div>
 

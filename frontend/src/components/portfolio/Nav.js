@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion, useScroll } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const LINKS = [
@@ -10,6 +11,7 @@ const LINKS = [
 
 export const Nav = () => {
   const [open, setOpen] = useState(false);
+  const { scrollYProgress } = useScroll();
 
   const go = (e, href) => {
     e.preventDefault();
@@ -61,6 +63,12 @@ export const Nav = () => {
           {open ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>
+
+      <motion.div
+        data-testid="scroll-progress-bar"
+        style={{ scaleX: scrollYProgress }}
+        className="absolute inset-x-0 bottom-0 h-[2px] origin-left bg-plum"
+      />
 
       {open && (
         <nav

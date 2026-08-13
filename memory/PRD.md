@@ -23,19 +23,18 @@ Minimal, editorial one-page portfolio for a creative strategist ("more design st
 - Fully responsive, plum accent only, generous whitespace
 
 ## Implemented (2026-08-13)
-- Kinetic hero: masked line reveal, plum italic "Dixit", floating circular headshot with offset plum ring, 4-stat bar
+- Kinetic hero: masked single-line name reveal, centered layout (name, subheadline, tagline, intro), floating circular headshot below with offset plum ring, 4-stat bar ("3 Awards for Distinguished Work")
 - Editorial marquee strip (Brand · Content · Conversion …)
-- Selected Work: 5 numbered chapters, feature media with parallax (images), autoplay muted videos, role lists, plum Impact boxes
-- Project 2: 4 working YouTube embeds; Project 5: Instagram + GQ India link cards
-- About: pull-quote, bio, education, styled disabled Download Resume button (PDF pending)
-- Contact: massive "Let's Build Something", placeholder email/phone/LinkedIn (clearly marked)
+- Selected Work: 5 numbered chapters, text-first layout (tag/title/body + roles/impact), uniform media grids below with consistent per-project aspect ratios (P1: 3-col 3/4; P2: 3-col 4/3 even 6-item grid; P3: 2x2 3/4; P4: 2-col 16/10; P5: 2x2 4/3)
+- Project 2: 4 working YouTube embeds; Project 5: Instagram + GQ India link cards; Project 4: Impact section removed (no metrics yet)
+- About: pull-quote, bio, two education lines (NIFT MFM + Amity BJMC), working Download Resume button (PDF in /public/media)
+- Contact: real details — noyanikadixit@gmail.com, +91-8795790773, linkedin.com/in/noyanika-dixit-258bb815b
+- Thin plum scroll-progress bar under nav (framer-motion useScroll + scaleX)
 - Mobile: hamburger menu, 2x2 stat grid, stacked layouts — verified
-- Videos moved to /public/media for reliable local playback (H.264, portrait)
+- Videos served locally from /public/media (H.264, portrait, verified)
 
 ## Backlog
-- P0: Upload remaining images (1-onsitestores b–e, 2-onset-bts-b, 3-serve b–d, 4-myntra a–b, 5-social-b) — slots are labeled and ready
-- P0: Real contact details (email, phone, LinkedIn URL)
-- P0: Resume PDF for Download button
+- P0: Remaining image uploads (1-onsitestores c–e, 3-serve b & d, 4-myntra-b, 5-social-b) — slots labeled and ready
 - P1: Myntra (Project 4) impact metrics once shareable
 - P2: OpenGraph/social share image, favicon
 - P2: Instagram native embed (oEmbed) instead of link card

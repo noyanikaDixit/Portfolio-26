@@ -1,6 +1,6 @@
 import { Download } from "lucide-react";
 import { Reveal, SectionHeading } from "@/components/portfolio/Reveal";
-import { ABOUT_TEXT } from "@/data/content";
+import { ABOUT_TEXT, EDUCATION, RESUME_URL } from "@/data/content";
 
 export const About = () => (
   <section
@@ -28,23 +28,26 @@ export const About = () => (
             <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-muted">
               Education
             </p>
-            <p data-testid="about-education" className="mt-2 font-serif text-xl tracking-tight">
-              NIFT — Master of Fashion Management (MFM)
-            </p>
+            {EDUCATION.map((e) => (
+              <p
+                key={e}
+                data-testid="about-education"
+                className="mt-2 font-serif text-xl tracking-tight"
+              >
+                {e}
+              </p>
+            ))}
           </div>
           <div className="mt-10">
-            <button
-              type="button"
+            <a
+              href={RESUME_URL}
+              download="Noyanika-Dixit-Resume.pdf"
               data-testid="resume-download-button"
-              aria-disabled="true"
-              className="inline-flex cursor-not-allowed items-center gap-3 rounded-full bg-plum px-8 py-4 text-sm font-medium uppercase tracking-[0.15em] text-cream opacity-90"
+              className="inline-flex items-center gap-3 rounded-full bg-plum px-8 py-4 text-sm font-medium uppercase tracking-[0.15em] text-cream transition-colors duration-300 hover:bg-plum-dark"
             >
               <Download size={16} />
               Download Resume
-            </button>
-            <p className="mt-3 text-xs text-muted">
-              Resume PDF coming soon — upload it and I&rsquo;ll wire this button up.
-            </p>
+            </a>
           </div>
         </Reveal>
       </div>

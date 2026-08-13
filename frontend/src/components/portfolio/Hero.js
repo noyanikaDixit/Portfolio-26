@@ -19,85 +19,80 @@ export const Hero = () => {
     <section
       id="home"
       data-testid="hero-section"
-      className="flex min-h-screen flex-col justify-center px-6 pt-28 md:px-12 md:pt-32"
+      className="flex min-h-screen flex-col justify-center px-6 pt-32 text-center md:px-12"
     >
       <div className="mx-auto w-full max-w-[1600px]">
-        <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-8">
-          <div className="lg:col-span-7">
-            <motion.p
-              data-testid="hero-subheadline"
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.9, ease: "easeOut" }}
-              className="mb-6 text-xs font-medium uppercase tracking-[0.25em] text-plum md:text-sm"
-            >
-              Creative Strategist — Brand, Content &amp; Conversion
-            </motion.p>
+        <motion.p
+          data-testid="hero-subheadline"
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.9, ease: "easeOut" }}
+          className="mb-6 text-xs font-medium uppercase tracking-[0.25em] text-plum md:text-sm"
+        >
+          Creative Strategist — Brand, Content &amp; Conversion
+        </motion.p>
 
-            <h1
-              data-testid="hero-headline"
-              className="font-serif text-[clamp(3.4rem,10vw,9.5rem)] leading-[0.92] tracking-tighter"
-            >
-              <MaskedLine delay={0.1}>Noyanika</MaskedLine>
-              <MaskedLine delay={0.28}>
-                <span className="italic text-plum">Dixit</span>
-              </MaskedLine>
-            </h1>
+        <h1
+          data-testid="hero-headline"
+          className="whitespace-nowrap font-serif text-[clamp(2.4rem,8vw,8rem)] leading-[0.95] tracking-tighter"
+        >
+          <MaskedLine delay={0.1}>
+            Noyanika <span className="italic text-plum">Dixit</span>
+          </MaskedLine>
+        </h1>
 
-            <motion.p
-              data-testid="hero-tagline"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: 1.05, ease: [0.16, 1, 0.3, 1] }}
-              className="mt-8 font-serif text-xl italic leading-snug text-ink md:text-2xl"
-            >
-              Curious mind. Creative instinct. A soft spot for turning good
-              ideas into things people remember.
-            </motion.p>
+        <motion.p
+          data-testid="hero-tagline"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 1.05, ease: [0.16, 1, 0.3, 1] }}
+          className="mx-auto mt-8 max-w-2xl font-serif text-xl italic leading-snug text-ink md:text-2xl"
+        >
+          Curious mind. Creative instinct. A soft spot for turning good ideas
+          into things people remember.
+        </motion.p>
 
-            <motion.p
-              data-testid="hero-intro"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: 1.2, ease: [0.16, 1, 0.3, 1] }}
-              className="mt-6 max-w-xl text-base leading-relaxed text-muted md:text-lg"
-            >
-              I&rsquo;m a creative strategist who helps brands find their voice
-              and connect with their audience. I spend my time building brand
-              and content strategies, shaping campaigns and turning ideas into
-              experiences that drive awareness and action.
-            </motion.p>
+        <motion.p
+          data-testid="hero-intro"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 1.2, ease: [0.16, 1, 0.3, 1] }}
+          className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-muted md:text-lg"
+        >
+          I&rsquo;m a creative strategist who helps brands find their voice and
+          connect with their audience. I spend my time building brand and
+          content strategies, shaping campaigns and turning ideas into
+          experiences that drive awareness and action.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.92 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          className="mt-14 flex justify-center"
+        >
+          <div className="relative">
+            <div
+              aria-hidden="true"
+              className="absolute -bottom-4 -right-4 h-full w-full rounded-full border border-plum/40"
+            />
+            <motion.img
+              src={HEADSHOT}
+              alt="Noyanika Dixit"
+              data-testid="hero-headshot"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              className="relative aspect-square w-60 rounded-full object-cover md:w-80"
+            />
           </div>
-
-          <div className="flex justify-center lg:col-span-5 lg:justify-end">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.92 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-              className="relative"
-            >
-              <div
-                aria-hidden="true"
-                className="absolute -bottom-4 -right-4 h-full w-full rounded-full border border-plum/40"
-              />
-              <motion.img
-                src={HEADSHOT}
-                alt="Noyanika Dixit"
-                data-testid="hero-headshot"
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                className="relative aspect-square w-64 rounded-full object-cover md:w-80 lg:w-[24rem]"
-              />
-            </motion.div>
-          </div>
-        </div>
+        </motion.div>
 
         <motion.div
           data-testid="hero-stat-bar"
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.4, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-16 grid grid-cols-2 border-y border-line md:mt-24 md:grid-cols-4"
+          className="mt-16 grid grid-cols-2 border-y border-line text-left md:mt-24 md:grid-cols-4"
         >
           {STATS.map((s, i) => (
             <div

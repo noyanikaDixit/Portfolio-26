@@ -1,13 +1,15 @@
-const ASSET_BASE =
+const ASSET_BASE_A =
   "https://customer-assets-39nsmqrw.emergentagent.net/job_2ba8fcc9-1ae8-4409-bf1e-9e9e6680a45f/artifacts";
+const ASSET_BASE_B =
+  "https://customer-assets-4nw71qhi.emergentagent.net/job_creative-convert-6/artifacts";
 
-export const HEADSHOT = `${ASSET_BASE}/2x39vmio_headshot-hero-section.webp`;
+export const HEADSHOT = `${ASSET_BASE_A}/2x39vmio_headshot-hero-section.webp`;
 
 export const STATS = [
   { value: "170%", label: "CTR lift" },
   { value: "500bps", label: "Conversion increase" },
   { value: "3x", label: "Organic content growth" },
-  { value: "2", label: "Awards at Amazon" },
+  { value: "3", label: "Awards for Distinguished Work" },
 ];
 
 export const MARQUEE_WORDS = [
@@ -36,9 +38,11 @@ export const PROJECTS = [
     ],
     impact:
       "Reduced bounce rate and increased conversion by 500bps. CTR gains of 250–366% across campaigns.",
+    grid: "grid gap-4 sm:grid-cols-2 lg:grid-cols-3",
+    aspect: "aspect-[3/4]",
     media: [
       { type: "video", src: "/media/45ntxuwu_1-onsitestores-a.mp4", label: "1-onsitestores-a" },
-      { type: "placeholder", label: "1-onsitestores-b" },
+      { type: "video", src: "/media/ekc9s85d_1-onsitestores-b.mp4", label: "1-onsitestores-b" },
       { type: "placeholder", label: "1-onsitestores-c" },
       { type: "placeholder", label: "1-onsitestores-d" },
       { type: "placeholder", label: "1-onsitestores-e" },
@@ -57,9 +61,11 @@ export const PROJECTS = [
       "Talent Coordination",
     ],
     impact: "21+ shoots and 15+ live activations led end-to-end.",
+    grid: "grid gap-4 sm:grid-cols-2 lg:grid-cols-3",
+    aspect: "aspect-[4/3]",
     media: [
-      { type: "image", src: `${ASSET_BASE}/vjiusvgx_2-onset-bts-a.png`, label: "2-onset-bts-a" },
-      { type: "placeholder", label: "2-onset-bts-b" },
+      { type: "image", src: `${ASSET_BASE_A}/vjiusvgx_2-onset-bts-a.png`, label: "2-onset-bts-a" },
+      { type: "image", src: `${ASSET_BASE_B}/um946wyj_2-onset-bts-b.png`, label: "2-onset-bts-b" },
       { type: "youtube", src: yt("kGli_grpDVE"), label: "Launch film" },
       { type: "youtube", src: yt("09xZPtZlV_s"), label: "Launch film" },
       { type: "youtube", src: yt("nAG6yyFEEH8"), label: "Launch film" },
@@ -79,10 +85,12 @@ export const PROJECTS = [
       "Social & CRM Extension",
     ],
     impact: "2X engagement, +40% OPS, +170% CTR.",
+    grid: "grid gap-4 sm:grid-cols-2",
+    aspect: "aspect-[3/4]",
     media: [
       { type: "video", src: "/media/w8wxgvix_3-serve-landingpage-a.mp4", label: "3-serve-landingpage-a" },
       { type: "placeholder", label: "3-serve-landingpage-b" },
-      { type: "placeholder", label: "3-serve-landingpage-c" },
+      { type: "image", src: `${ASSET_BASE_B}/5jd759o5_3-serve-landingpage-c.jpg`, label: "3-serve-landingpage-c" },
       { type: "placeholder", label: "3-serve-landingpage-d" },
     ],
   },
@@ -98,9 +106,11 @@ export const PROJECTS = [
       "CRM Messaging",
       "Cross-Functional Alignment",
     ],
-    impact: "Impact metrics coming soon — this work is currently in-market.",
+    impact: null,
+    grid: "grid gap-4 sm:grid-cols-2",
+    aspect: "aspect-[16/10]",
     media: [
-      { type: "placeholder", label: "4-myntra-a" },
+      { type: "image", src: `${ASSET_BASE_B}/e6hg8rpr_4-myntra-a.png`, label: "4-myntra-a" },
       { type: "placeholder", label: "4-myntra-b" },
     ],
   },
@@ -118,8 +128,10 @@ export const PROJECTS = [
     ],
     impact:
       "Organic content views grew 3x (avg 8K → 30K). Social engagement tripled in H2'24 (262 → 803). Creative brief compliance improved from 55.86% to 98.6%.",
+    grid: "grid gap-4 sm:grid-cols-2",
+    aspect: "aspect-[4/3]",
     media: [
-      { type: "image", src: `${ASSET_BASE}/u7on7pra_5-social-a.webp`, label: "5-social-a" },
+      { type: "image", src: `${ASSET_BASE_A}/u7on7pra_5-social-a.webp`, label: "5-social-a" },
       { type: "placeholder", label: "5-social-b" },
       {
         type: "link",
@@ -140,8 +152,15 @@ export const PROJECTS = [
 export const ABOUT_TEXT =
   "I've spent the last seven years figuring out what makes people stop scrolling and actually buy something, first at Amazon Fashion, now at Myntra. Give me a pile of research and a blank page and I'm genuinely happy. I've named a brand, written its first words, argued for its layout, and then shown up on set to make sure the shoot matched the idea in my head. I like the messy middle part of building something new more than the polished end of it. Also, I will absolutely notice if your product page copy doesn't match your Instagram caption. It's a whole personality trait at this point.";
 
+export const EDUCATION = [
+  "NIFT — Master of Fashion Management (MFM)",
+  "Amity University — Bachelor of Journalism & Mass Communication",
+];
+
+export const RESUME_URL = "/media/Noyanika-Dixit-Resume.pdf";
+
 export const CONTACT_LINKS = [
-  { label: "Email", value: "your.email@example.com", href: "mailto:your.email@example.com", testid: "contact-email-link" },
-  { label: "Phone", value: "+91 00000 00000", href: "tel:+910000000000", testid: "contact-phone-link" },
-  { label: "LinkedIn", value: "linkedin.com/in/your-profile", href: "https://linkedin.com/in/your-profile", testid: "contact-linkedin-link" },
+  { label: "Email", value: "noyanikadixit@gmail.com", href: "mailto:noyanikadixit@gmail.com", testid: "contact-email-link" },
+  { label: "Phone", value: "+91-8795790773", href: "tel:+918795790773", testid: "contact-phone-link" },
+  { label: "LinkedIn", value: "linkedin.com/in/noyanika-dixit-258bb815b", href: "https://www.linkedin.com/in/noyanika-dixit-258bb815b/", testid: "contact-linkedin-link" },
 ];
