@@ -6,7 +6,7 @@ const ASSET_BASE_B =
 export const HEADSHOT = `${ASSET_BASE_A}/2x39vmio_headshot-hero-section.webp`;
 
 export const STATS = [
-  { value: "Up to 366%", label: "CTR lift", small: true },
+  { prefix: "Up to", value: "366%", label: "CTR lift" },
   { value: "500bps", label: "Conversion increase" },
   { value: "3x", label: "Organic content growth" },
   { value: "3", label: "Awards for Distinguished Work" },
@@ -39,7 +39,9 @@ export const PROJECTS = [
     ],
     impact:
       "Reduced bounce rate and increased conversion by 500bps. CTR gains of 250–366% across campaigns.",
-    cols: "columns-1 sm:columns-2",
+    grid: "grid gap-4 sm:grid-cols-2",
+    aspect: "aspect-[3/4]",
+    mediaMax: "max-w-4xl",
     media: [
       { type: "video", src: "/media/45ntxuwu_1-onsitestores-a.mp4", poster: "/media/posters/onsite-a.jpg", label: "1-onsitestores-a" },
       { type: "video", src: "/media/ekc9s85d_1-onsitestores-b.mp4", poster: "/media/posters/onsite-b.jpg", label: "1-onsitestores-b" },
@@ -60,10 +62,12 @@ export const PROJECTS = [
       "Talent Coordination",
     ],
     impact: "21+ shoots and 15+ live activations led end-to-end.",
-    cols: "columns-1 sm:columns-2 lg:columns-3",
+    grid: "grid gap-4 sm:grid-cols-2 lg:grid-cols-3",
+    aspect: "aspect-[4/3]",
+    mediaMax: "max-w-6xl",
     media: [
       { type: "image", src: `${ASSET_BASE_A}/vjiusvgx_2-onset-bts-a.png`, label: "2-onset-bts-a" },
-      { type: "image", src: `${ASSET_BASE_B}/um946wyj_2-onset-bts-b.png`, label: "2-onset-bts-b" },
+      { type: "image", src: `${ASSET_BASE_B}/um946wyj_2-onset-bts-b.png`, label: "2-onset-bts-b", position: "object-top" },
       { type: "youtube", src: yt("kGli_grpDVE"), label: "Launch film" },
       { type: "youtube", src: yt("09xZPtZlV_s"), label: "Launch film" },
       { type: "youtube", src: yt("nAG6yyFEEH8"), label: "Launch film" },
@@ -83,7 +87,9 @@ export const PROJECTS = [
       "Social & CRM Extension",
     ],
     impact: "2X engagement, +40% OPS, +170% CTR.",
-    cols: "columns-1 sm:columns-2",
+    grid: "grid gap-4 sm:grid-cols-2",
+    aspect: "aspect-[3/4]",
+    mediaMax: "max-w-4xl",
     media: [
       { type: "video", src: "/media/w8wxgvix_3-serve-landingpage-a.mp4", poster: "/media/posters/serve-a.jpg", label: "3-serve-landingpage-a" },
       { type: "image", src: "/media/3-serve-landingpage-b.gif", label: "3-serve-landingpage-b" },
@@ -103,12 +109,18 @@ export const PROJECTS = [
       "CRM Messaging",
       "Cross-Functional Alignment",
       "AI-Assisted Trend & Content Analysis",
+      "Vernacular & Regional Language Content Adaptation",
     ],
-    impact: null,
-    cols: "columns-1 sm:columns-2",
+    impact:
+      "4.33% CTR on major sale banners, 73% above the 2.5% industry benchmark.",
+    grid: "grid gap-4 sm:grid-cols-2",
+    aspect: "aspect-[4/3]",
+    mediaMax: "max-w-4xl",
     media: [
-      { type: "image", src: `${ASSET_BASE_B}/e6hg8rpr_4-myntra-a.png`, label: "4-myntra-a" },
-      { type: "image", src: `${ASSET_BASE_B}/d6uj4f12_4-myntra-b.jpg`, label: "4-myntra-b" },
+      { type: "image", src: `${ASSET_BASE_B}/3bfl36s7_4-myntra-a.png`, label: "4-myntra-a" },
+      { type: "image", src: `${ASSET_BASE_B}/vsou1x59_4-myntra-b.png`, label: "4-myntra-b" },
+      { type: "image", src: `${ASSET_BASE_B}/gvrwzks8_4-myntra-c.png`, label: "4-myntra-c" },
+      { type: "image", src: `${ASSET_BASE_B}/o1adxc0w_4-myntra-d.jpg`, label: "4-myntra-vernacular" },
     ],
   },
   {
@@ -125,7 +137,9 @@ export const PROJECTS = [
     ],
     impact:
       "Organic content views grew 3x (avg 8K → 30K). Social engagement tripled in H2'24 (262 → 803). Creative brief compliance improved from 55.86% to 98.6%.",
-    cols: "columns-1 sm:columns-2",
+    grid: "grid gap-4 sm:grid-cols-2",
+    aspect: "aspect-[4/3]",
+    mediaMax: "max-w-4xl",
     media: [
       { type: "image", src: `${ASSET_BASE_A}/u7on7pra_5-social-a.webp`, label: "5-social-a" },
       { type: "image", src: `${ASSET_BASE_B}/6gi41qob_5-social-b.webp`, label: "5-social-b" },
@@ -142,6 +156,35 @@ export const PROJECTS = [
         label: "GQ India Feature",
         sub: "Amazon Fashion Diwali Bash",
         thumb: "/media/gq-diwali-bash.jpg",
+      },
+    ],
+  },
+];
+
+export const EXPLORE = [
+  {
+    id: "magazine",
+    tag: "Editorial & Content Curation | Amazon Fashion",
+    title: "Amazon Fashion's First-Ever Printed Magazine",
+    body: "A long-form content experiment that brought storytelling, style, and shopping together in one glossy moment. This vacation-themed issue covered everything from effortless fashion to easy beauty tips to destination-ready looks. Over 5,000 copies were distributed free with customer orders across metro cities, cementing Amazon Fashion's image as a fashion-first platform. I helped shape the content mix and product curation, ensuring every page blended editorial storytelling with seamless product integration.",
+    media: [
+      { type: "video", src: "/media/kaots6du_explore1-magazine-a.mp4", poster: "/media/posters/magazine-a.jpg", label: "explore1-magazine-a" },
+      { type: "placeholder", label: "explore1-magazine-b" },
+    ],
+  },
+  {
+    id: "wildcraft",
+    tag: "Campaign & On-site Store Launch | Amazon Fashion",
+    title: "Wildcraft x Amazon Fashion: The Great Outdoors",
+    body: "In a campaign that celebrated the spirit of adventure, Amazon Fashion launched Wildcraft with a dedicated on-site store and multi-channel push. From durable hiking gear to adventure-ready essentials, the campaign brought the great outdoors closer to customers through engaging storytelling, social buzz, and immersive on-site experiences.",
+    media: [
+      { type: "placeholder", label: "explore2-wildcraft-a" },
+      {
+        type: "link",
+        src: "https://www.instagram.com/p/DFfAjzXy7cY/?igsh=MW9panAzd2dsZGM1dA%3D%3D",
+        label: "Instagram Post",
+        sub: "Wildcraft x Amazon Fashion",
+        thumb: null,
       },
     ],
   },

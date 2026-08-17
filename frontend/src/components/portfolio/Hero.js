@@ -102,11 +102,12 @@ export const Hero = () => {
                 i === 2 ? "max-md:border-l-0 max-md:border-t max-md:border-line" : ""
               } ${i === 3 ? "max-md:border-t max-md:border-line" : ""}`}
             >
-              <p
-                className={`whitespace-nowrap font-serif tracking-tight text-ink ${
-                  s.small ? "text-3xl md:text-4xl" : "text-4xl md:text-5xl"
-                }`}
-              >
+              {s.prefix && (
+                <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-muted">
+                  {s.prefix}
+                </p>
+              )}
+              <p className="whitespace-nowrap font-serif text-4xl tracking-tight text-ink md:text-5xl">
                 {s.value}
               </p>
               <p className="mt-2 text-[11px] font-medium uppercase tracking-[0.2em] text-muted">

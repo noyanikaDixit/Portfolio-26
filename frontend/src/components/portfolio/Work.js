@@ -1,11 +1,24 @@
 import { useRef, useState } from "react";
-import { ArrowUpRight, Instagram, Play } from "lucide-react";
+import { ArrowUpRight, Image as ImageIcon, Instagram, Play } from "lucide-react";
 import { Reveal, SectionHeading } from "@/components/portfolio/Reveal";
 import { PROJECTS } from "@/data/content";
 
-const TILE = "mb-4 break-inside-avoid";
+export const PlaceholderSlot = ({ label, aspect, testid }) => (
+  <div
+    data-testid={testid}
+    className={`flex items-center justify-center rounded-md border border-dashed border-plum/30 bg-plum-light/50 p-4 text-center ${aspect}`}
+  >
+    <div>
+      <ImageIcon className="mx-auto mb-3 text-plum/40" size={22} />
+      <p className="font-mono text-xs text-plum/70">{label}</p>
+      <p className="mt-1 text-[10px] font-medium uppercase tracking-[0.2em] text-muted">
+        Awaiting upload
+      </p>
+    </div>
+  </div>
+);
 
-const VideoTile = ({ item, testid }) => {
+const VideoTile = ({ item, aspect, testid }) => {
   const ref = useRef(null);
   const [playing, setPlaying] = useState(false);
 
@@ -16,7 +29,7 @@ const VideoTile = ({ item, testid }) => {
 
   return (
     <div
-      className={`group relative overflow-hidden rounded-md border border-line bg-ink/5 ${TILE}`}
+      className={`group relative overflow-hidden rounded-md border border-line bg-ink/5 ${aspect}`}
     >
       <video
         ref={ref}
@@ -27,7 +40,7 @@ const VideoTile = ({ item, testid }) => {
         playsInline
         controls={playing}
         onClick={playing ? undefined : play}
-        className="block h-auto w-full"
+        className="absolute inset-0 h-full w-full object-cover"
       />
       {!playing && (
         <button
@@ -46,24 +59,24 @@ const VideoTile = ({ item, testid }) => {
   );
 };
 
-const LinkCard = ({ item, testid }) => (
+const LinkCard = ({ item, aspect, testid }) => (
   <a
     href={item.src}
     target="_blank"
     rel="noopener noreferrer"
     data-testid={testid}
-    className={`group block overflow-hidden rounded-md border border-line bg-white transition-colors duration-300 hover:border-plum/50 ${TILE}`}
+    className={`group flex flex-col overflow-hidden rounded-md border border-line bg-white transition-colors duration-300 hover:border-plum/50 ${aspect}`}
   >
-    <div className="overflow-hidden">
+    <div className="relative min-h-0 flex-1 overflow-hidden">
       {item.thumb ? (
         <img
           src={item.thumb}
           alt={item.label}
           loading="lazy"
-          className="block h-auto w-full transition-transform duration-700 ease-out group-hover:scale-105"
+          className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
         />
       ) : (
-        <div className="flex aspect-[4/3] items-center justify-center bg-plum-light/60">
+        <div className="flex h-full items-center justify-center bg-plum-light/60">
           <Instagram size={30} className="text-plum" />
         </div>
       )}
@@ -85,19 +98,20 @@ const LinkCard = ({ item, testid }) => (
   </a>
 );
 
-const MediaItem = ({ item, testid }) => {
-  if (item.type === "video") return <VideoTile item={item} testid={testid} />;
+export const MediaItem = ({ item, aspect, testid }) => {
+  if (item.type === "video")
+    return <VideoTile item={item} aspect={aspect} testid={testid} />;
   if (item.type === "image") {
     return (
-      <div
-        className={`overflow-hidden rounded-md border border-line ${TILE}`}
-      >
+      <div className={`overflow-hidden rounded-md border border-line ${aspect}`}>
         <img
           src={item.src}
           alt={item.label}
           data-testid={testid}
           loading="lazy"
-          className="block h-auto w-full transition-transform duration-700 ease-out hover:scale-105"
+          className={`h-full w-full object-cover transition-transform duration-700 ease-out hover:scale-105 ${
+            item.position || ""
+          }`}
         />
       </div>
     );
@@ -111,11 +125,13 @@ const MediaItem = ({ item, testid }) => {
         loading="lazy"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
-        className={`aspect-video w-full rounded-md border border-line ${TILE}`}
+        className={`w-full rounded-md border border-line ${aspect || "aspect-video"}`}
       />
     );
   }
-  return <LinkCard item={item} testid={testid} />;
+  if (item.type === "link")
+    return <LinkCard item={item} aspect={aspect} testid={testid} />;
+  return <PlaceholderSlot label={item.label} aspect={aspect} testid={testid} />;
 };
 
 const ProjectCard = ({ project }) => (
@@ -172,11 +188,12 @@ const ProjectCard = ({ project }) => (
     </Reveal>
 
     <Reveal delay={0.12}>
-      <div className={`mt-12 gap-4 ${project.cols}`}>
+      <div className={`mt-12 ${project.grid} ${project.mediaMax || ""}`}>
         {project.media.map((item, i) => (
           <MediaItem
             key={`${item.label}-${i}`}
             item={item}
+            aspect={project.aspect}
             testid={`project-${project.id}-media-${i}`}
           />
         ))}

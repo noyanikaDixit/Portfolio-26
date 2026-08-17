@@ -40,10 +40,9 @@ Minimal, editorial one-page portfolio for a creative strategist ("more design st
 - Videos served locally from /public/media (H.264, portrait, verified)
 
 ## Backlog
+- P0: Missing Explore More images: explore1-magazine-b, explore2-wildcraft-a, explore2-wildcraft-b (IG cover) — slots ready
 - P0: Background music audio file (/public/media/background-audio.mp3) — button is wired, waiting on upload
-- P0: "Explore More Work" projects + images (3 slots ready, section shipped)
 - P1: Claude AI integration — user asked for it (2026-08-17); awaiting their pick of use case (chat assistant vs pitch generator) and model (Sonnet 4.6 vs Haiku 4.5); will need integration_expert + FastAPI route
-- P1: Myntra (Project 4) impact metrics once shareable
 - P2: favicon
 - P2: custom domain once deployed externally
 
