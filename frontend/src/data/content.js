@@ -88,7 +88,7 @@ export const PROJECTS = [
     aspect: "aspect-[3/4]",
     media: [
       { type: "video", src: "/media/w8wxgvix_3-serve-landingpage-a.mp4", poster: "/media/posters/serve-a.jpg", label: "3-serve-landingpage-a" },
-      { type: "placeholder", label: "3-serve-landingpage-b" },
+      { type: "image", src: "/media/3-serve-landingpage-b.gif", label: "3-serve-landingpage-b" },
       { type: "image", src: `${ASSET_BASE_B}/5jd759o5_3-serve-landingpage-c.jpg`, label: "3-serve-landingpage-c" },
       { type: "image", src: `${ASSET_BASE_B}/qnpvfdcd_3-serve-landingpage-d.jpg`, label: "3-serve-landingpage-d" },
     ],
@@ -137,6 +137,7 @@ export const PROJECTS = [
         src: "https://www.instagram.com/reel/DAvoLpFpSb9/?utm_source=ig_web_button_share_sheet",
         label: "Instagram Reel",
         sub: "Watch on Instagram",
+        thumb: "/media/ig-reel-thumb.png",
       },
       {
         type: "link",

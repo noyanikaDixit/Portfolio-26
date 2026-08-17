@@ -32,16 +32,17 @@ Minimal, editorial one-page portfolio for a creative strategist ("more design st
 - Videos: click-to-play tiles with extracted first-frame posters (/public/media/posters/), no autoplay
 - Project galleries fully populated except 3-serve-landingpage-b (P1 now 2x2 video grid; P2 bts-b uses object-top so faces show; P3 has TV creative + app screenshot; P4 has both Myntra creatives; P5 has both event photos + GQ og-image thumbnail card + Instagram icon card)
 - OG/Twitter share card generated (1200x630 plum-cream, /public/og-image.jpg) + meta tags in index.html
-- Hero masked-reveal descender clipping fixed (pb 0.25em)
+- Hero masked-reveal descender clipping fixed (padding moved to mask container)
+- Serve grid complete: 3-serve-landingpage-b.gif (animated) added — all placeholders cleared
+- Instagram reel card uses uploaded laptop screenshot thumbnail (/media/ig-reel-thumb.png)
 - Thin plum scroll-progress bar under nav (framer-motion useScroll + scaleX)
 - Mobile: hamburger menu, 2x2 stat grid, stacked layouts — verified
 - Videos served locally from /public/media (H.264, portrait, verified)
 
 ## Backlog
-- P1: 3-serve-landingpage-b image upload (last remaining placeholder)
-- P1: Instagram reel thumbnail — IG blocks scraping; current card uses an Instagram icon on plum; replace with a real still if user uploads one
 - P1: Myntra (Project 4) impact metrics once shareable
 - P2: favicon
+- P2: custom domain once deployed externally
 
 ## Test Credentials
 - No auth — see /app/memory/test_credentials.md (empty by design)

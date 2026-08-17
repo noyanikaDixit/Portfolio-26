@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { HEADSHOT, STATS } from "@/data/content";
 
 const MaskedLine = ({ children, delay = 0 }) => (
-  <span className="block overflow-hidden">
+  <span className="block overflow-hidden pb-[0.18em] -mb-[0.18em]">
     <motion.span
-      className="block pb-[0.25em] -mb-[0.25em]"
+      className="block"
       initial={{ y: "110%" }}
       animate={{ y: 0 }}
       transition={{ duration: 1.1, delay, ease: [0.16, 1, 0.3, 1] }}
