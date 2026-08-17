@@ -4,6 +4,8 @@ import { Reveal, SectionHeading } from "@/components/portfolio/Reveal";
 import { openLightbox } from "@/components/portfolio/Lightbox";
 import { PROJECTS } from "@/data/content";
 
+const TILE = "shadow-sm transition-shadow duration-300 hover:shadow-md";
+
 export const PlaceholderSlot = ({ label, aspect, testid }) => (
   <div
     data-testid={testid}
@@ -30,7 +32,7 @@ const VideoTile = ({ item, aspect, testid }) => {
 
   return (
     <div
-      className={`group relative overflow-hidden rounded-md border border-line bg-ink/5 ${aspect}`}
+      className={`group relative overflow-hidden rounded-md border border-line bg-ink/5 ${TILE} ${aspect}`}
     >
       <video
         ref={ref}
@@ -66,7 +68,7 @@ const LinkCard = ({ item, aspect, testid }) => (
     target="_blank"
     rel="noopener noreferrer"
     data-testid={testid}
-    className={`group flex flex-col overflow-hidden rounded-md border border-line bg-white transition-colors duration-300 hover:border-plum/50 ${aspect}`}
+    className={`group flex flex-col overflow-hidden rounded-md border border-line bg-white transition-colors duration-300 hover:border-plum/50 ${TILE} ${aspect}`}
   >
     <div className="relative min-h-0 flex-1 overflow-hidden">
       {item.thumb ? (
@@ -110,7 +112,7 @@ export const MediaItem = ({ item, aspect, testid }) => {
         aria-label={`View ${item.label} full size`}
         onClick={() => openLightbox(item.src, item.label)}
         onKeyDown={(e) => e.key === "Enter" && openLightbox(item.src, item.label)}
-        className={`cursor-zoom-in overflow-hidden rounded-md border border-line ${aspect}`}
+        className={`cursor-zoom-in overflow-hidden rounded-md border border-line ${TILE} ${aspect}`}
       >
         <img
           src={item.src}
@@ -133,7 +135,7 @@ export const MediaItem = ({ item, aspect, testid }) => {
         loading="lazy"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
-        className={`w-full rounded-md border border-line ${aspect || "aspect-video"}`}
+        className={`w-full rounded-md border border-line ${TILE} ${aspect || "aspect-video"}`}
       />
     );
   }
@@ -151,7 +153,7 @@ const ProjectCard = ({ project }) => (
         </span>
         <span className="h-px flex-1 bg-line" />
       </div>
-      <div className="grid gap-10 md:grid-cols-12 md:gap-14">
+      <div className="grid items-stretch gap-10 md:grid-cols-12 md:gap-14">
         <div className="md:col-span-7">
           <p
             data-testid={`project-${project.id}-tag`}
@@ -166,37 +168,39 @@ const ProjectCard = ({ project }) => (
             {project.body}
           </p>
         </div>
-        <div className="space-y-8 md:col-span-5">
-          <div>
-            <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-muted">
-              Role
-            </p>
-            <p
-              data-testid={`project-${project.id}-roles`}
-              className="mt-3 text-sm leading-relaxed text-ink"
-            >
-              {project.roles.join("  ·  ")}
-            </p>
-          </div>
-          {project.impact && (
-            <div className="rounded-md border border-line bg-white p-6">
-              <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-muted">
-                Impact
+        <div className="md:col-span-5">
+          <div className="flex h-full flex-col justify-between gap-10 rounded-lg border border-plum/15 bg-plum-light/50 p-6 md:p-8">
+            <div>
+              <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-plum/70">
+                Role
               </p>
               <p
-                data-testid={`project-${project.id}-impact`}
-                className="mt-3 font-serif text-lg font-semibold leading-snug text-plum"
+                data-testid={`project-${project.id}-roles`}
+                className="mt-3 text-sm leading-relaxed text-ink"
               >
-                {project.impact}
+                {project.roles.join("  ·  ")}
               </p>
             </div>
-          )}
+            {project.impact && (
+              <div className="border-t border-plum/15 pt-6">
+                <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-plum/70">
+                  Impact
+                </p>
+                <p
+                  data-testid={`project-${project.id}-impact`}
+                  className="mt-3 font-serif text-lg font-semibold leading-snug text-plum"
+                >
+                  {project.impact}
+                </p>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </Reveal>
 
     <Reveal delay={0.12}>
-      <div className={`mt-12 ${project.grid} ${project.mediaMax || ""}`}>
+      <div className={`mt-8 ${project.grid}`}>
         {project.media.map((item, i) => (
           <MediaItem
             key={`${item.label}-${i}`}
@@ -214,11 +218,11 @@ export const Work = () => (
   <section
     id="work"
     data-testid="work-section"
-    className="scroll-mt-24 px-6 py-24 md:px-12 md:py-40"
+    className="scroll-mt-24 px-6 py-24 md:px-12 md:py-32"
   >
-    <div className="mx-auto max-w-[1600px]">
+    <div className="mx-auto max-w-[1320px]">
       <SectionHeading number="01" title="Selected Work" testid="work-heading" />
-      <div className="space-y-24 md:space-y-40">
+      <div className="space-y-24 md:space-y-36">
         {PROJECTS.map((p) => (
           <ProjectCard key={p.id} project={p} />
         ))}

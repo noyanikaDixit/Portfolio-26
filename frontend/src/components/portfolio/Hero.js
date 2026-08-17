@@ -35,7 +35,7 @@ export const Hero = () => {
       data-testid="hero-section"
       className="flex min-h-screen flex-col justify-center px-6 pt-32 text-center md:px-12"
     >
-      <div className="mx-auto w-full max-w-[1600px]">
+      <div className="mx-auto w-full max-w-[1320px]">
         <motion.p
           data-testid="hero-subheadline"
           initial={{ opacity: 0, y: 16 }}

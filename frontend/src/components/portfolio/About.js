@@ -8,7 +8,7 @@ export const About = () => (
     data-testid="about-section"
     className="scroll-mt-24 border-t border-line bg-white px-6 py-24 md:px-12 md:py-40"
   >
-    <div className="mx-auto max-w-[1600px]">
+    <div className="mx-auto max-w-[1320px]">
       <SectionHeading number="02" title="About" testid="about-heading" />
       <div className="grid gap-14 md:grid-cols-12 md:gap-10">
         <Reveal className="md:col-span-5">

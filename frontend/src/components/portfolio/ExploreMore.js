@@ -45,7 +45,7 @@ export const ExploreMore = () => {
       data-testid="more-work-section"
       className="scroll-mt-24 px-6 pb-24 md:px-12 md:pb-40"
     >
-      <div className="mx-auto max-w-[1600px]">
+      <div className="mx-auto max-w-[1320px]">
         <Reveal>
           <div className="border-t border-line pt-14 md:pt-20">
             <h2
@@ -57,7 +57,7 @@ export const ExploreMore = () => {
             <p className="mt-4 text-base text-muted md:text-lg">
               A few more projects from my portfolio.
             </p>
-            <div className="mt-12 grid max-w-4xl gap-8 sm:grid-cols-2">
+            <div className="mt-12 grid gap-8 sm:grid-cols-2">
               {EXPLORE.map((entry) => (
                 <button
                   key={entry.id}

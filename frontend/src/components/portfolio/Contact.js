@@ -7,7 +7,7 @@ export const Contact = () => (
     data-testid="contact-section"
     className="scroll-mt-24 px-6 py-24 md:px-12 md:py-40"
   >
-    <div className="mx-auto max-w-[1600px] text-center">
+    <div className="mx-auto max-w-[1320px] text-center">
       <Reveal>
         <p className="mb-6 font-serif text-xl italic text-plum md:text-2xl">
           (03)
@@ -46,7 +46,7 @@ export const Contact = () => (
       </Reveal>
     </div>
 
-    <footer className="mx-auto mt-24 flex max-w-[1600px] flex-col items-center justify-between gap-3 border-t border-line pt-8 text-xs text-muted md:mt-32 md:flex-row">
+    <footer className="mx-auto mt-24 flex max-w-[1320px] flex-col items-center justify-between gap-3 border-t border-line pt-8 text-xs text-muted md:mt-32 md:flex-row">
       <p>&copy; 2026 Noyanika Dixit</p>
       <p>Creative Strategist — Brand, Content &amp; Conversion</p>
     </footer>

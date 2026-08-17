@@ -39,9 +39,8 @@ export const PROJECTS = [
     ],
     impact:
       "Reduced bounce rate and increased conversion by 500bps. CTR gains of 250–366% across campaigns.",
-    grid: "grid gap-4 sm:grid-cols-2",
+    grid: "grid gap-5 sm:grid-cols-2 lg:grid-cols-4",
     aspect: "aspect-[3/4]",
-    mediaMax: "max-w-4xl",
     media: [
       { type: "video", src: "/media/45ntxuwu_1-onsitestores-a.mp4", poster: "/media/posters/onsite-a.jpg", label: "1-onsitestores-a" },
       { type: "video", src: "/media/ekc9s85d_1-onsitestores-b.mp4", poster: "/media/posters/onsite-b.jpg", label: "1-onsitestores-b" },
@@ -62,9 +61,8 @@ export const PROJECTS = [
       "Talent Coordination",
     ],
     impact: "21+ shoots and 15+ live activations led end-to-end.",
-    grid: "grid gap-4 sm:grid-cols-2 lg:grid-cols-3",
+    grid: "grid gap-5 sm:grid-cols-2 lg:grid-cols-3",
     aspect: "aspect-[4/3]",
-    mediaMax: "max-w-6xl",
     media: [
       { type: "image", src: `${ASSET_BASE_A}/vjiusvgx_2-onset-bts-a.png`, label: "2-onset-bts-a" },
       { type: "image", src: `${ASSET_BASE_B}/um946wyj_2-onset-bts-b.png`, label: "2-onset-bts-b", position: "object-top" },
@@ -87,9 +85,8 @@ export const PROJECTS = [
       "Social & CRM Extension",
     ],
     impact: "2X engagement, +40% OPS, +170% CTR.",
-    grid: "grid gap-4 sm:grid-cols-2",
+    grid: "grid gap-5 sm:grid-cols-2 lg:grid-cols-4",
     aspect: "aspect-[3/4]",
-    mediaMax: "max-w-4xl",
     media: [
       { type: "video", src: "/media/w8wxgvix_3-serve-landingpage-a.mp4", poster: "/media/posters/serve-a.jpg", label: "3-serve-landingpage-a" },
       { type: "image", src: "/media/3-serve-landingpage-b.gif", label: "3-serve-landingpage-b" },
@@ -113,9 +110,8 @@ export const PROJECTS = [
     ],
     impact:
       "4.33% CTR on major sale banners, 73% above the 2.5% industry benchmark.",
-    grid: "grid gap-4 sm:grid-cols-2",
+    grid: "grid gap-5 sm:grid-cols-2 lg:grid-cols-4",
     aspect: "aspect-[4/3]",
-    mediaMax: "max-w-4xl",
     media: [
       { type: "image", src: `${ASSET_BASE_B}/3bfl36s7_4-myntra-a.png`, label: "4-myntra-a" },
       { type: "image", src: `${ASSET_BASE_B}/vsou1x59_4-myntra-b.png`, label: "4-myntra-b" },
@@ -137,9 +133,8 @@ export const PROJECTS = [
     ],
     impact:
       "Organic content views grew 3x (avg 8K → 30K). Social engagement tripled in H2'24 (262 → 803). Creative brief compliance improved from 55.86% to 98.6%.",
-    grid: "grid gap-4 sm:grid-cols-2",
+    grid: "grid gap-5 sm:grid-cols-2 lg:grid-cols-4",
     aspect: "aspect-[4/3]",
-    mediaMax: "max-w-4xl",
     media: [
       { type: "image", src: `${ASSET_BASE_A}/u7on7pra_5-social-a.webp`, label: "5-social-a" },
       { type: "image", src: `${ASSET_BASE_B}/6gi41qob_5-social-b.webp`, label: "5-social-b" },

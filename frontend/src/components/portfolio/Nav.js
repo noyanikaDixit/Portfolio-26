@@ -29,7 +29,7 @@ export const Nav = () => {
       data-testid="site-nav"
       className="fixed inset-x-0 top-0 z-50 border-b border-line/70 bg-cream/80 backdrop-blur-xl"
     >
-      <div className="mx-auto flex h-16 max-w-[1600px] items-center justify-between px-6 md:h-20 md:px-12">
+      <div className="mx-auto flex h-16 max-w-[1320px] items-center justify-between px-6 md:h-20 md:px-12">
         <a
           href="#home"
           data-testid="nav-logo"
