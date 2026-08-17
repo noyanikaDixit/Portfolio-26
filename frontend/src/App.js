@@ -5,8 +5,10 @@ import { Nav } from "@/components/portfolio/Nav";
 import { Hero } from "@/components/portfolio/Hero";
 import { MarqueeStrip } from "@/components/portfolio/MarqueeStrip";
 import { Work } from "@/components/portfolio/Work";
+import { ExploreMore } from "@/components/portfolio/ExploreMore";
 import { About } from "@/components/portfolio/About";
 import { Contact } from "@/components/portfolio/Contact";
+import { MusicButton } from "@/components/portfolio/MusicButton";
 
 function App() {
   useEffect(() => {
@@ -32,9 +34,11 @@ function App() {
         <Hero />
         <MarqueeStrip />
         <Work />
+        <ExploreMore />
         <About />
         <Contact />
       </main>
+      <MusicButton />
     </div>
   );
 }

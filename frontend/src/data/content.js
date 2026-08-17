@@ -6,7 +6,7 @@ const ASSET_BASE_B =
 export const HEADSHOT = `${ASSET_BASE_A}/2x39vmio_headshot-hero-section.webp`;
 
 export const STATS = [
-  { value: "170%", label: "CTR lift" },
+  { value: "Up to 366%", label: "CTR lift", small: true },
   { value: "500bps", label: "Conversion increase" },
   { value: "3x", label: "Organic content growth" },
   { value: "3", label: "Awards for Distinguished Work" },
@@ -16,6 +16,7 @@ export const MARQUEE_WORDS = [
   "Brand Strategy",
   "Content",
   "Conversion",
+  "AI",
   "Storytelling",
   "Research",
   "Campaigns",
@@ -28,7 +29,7 @@ export const PROJECTS = [
     id: "onsite-stores",
     number: "01",
     title: "Designing for Discovery: Onsite Product Stores",
-    tag: "Product Narrative & Conversion Strategy — Amazon Fashion",
+    tag: "Product Narrative & Conversion Strategy | Amazon Fashion",
     body: "Built a portfolio of category-led onsite stores, including Sneaker Street, Premium Edit, Wedding Store, and Festive Store, translating consumer research directly into store experience, content, and merchandising. Each store was built around a specific customer need: from footwear discovery to premium brand storytelling to seasonal shopping moments.",
     roles: [
       "Research & Insight",
@@ -38,8 +39,7 @@ export const PROJECTS = [
     ],
     impact:
       "Reduced bounce rate and increased conversion by 500bps. CTR gains of 250–366% across campaigns.",
-    grid: "grid gap-4 sm:grid-cols-2",
-    aspect: "aspect-[3/4]",
+    cols: "columns-1 sm:columns-2",
     media: [
       { type: "video", src: "/media/45ntxuwu_1-onsitestores-a.mp4", poster: "/media/posters/onsite-a.jpg", label: "1-onsitestores-a" },
       { type: "video", src: "/media/ekc9s85d_1-onsitestores-b.mp4", poster: "/media/posters/onsite-b.jpg", label: "1-onsitestores-b" },
@@ -51,8 +51,8 @@ export const PROJECTS = [
     id: "on-set",
     number: "02",
     title: "On Set: Production, Styling & Scripting",
-    tag: "Production Coordination — Amazon Fashion",
-    body: "Coordinated with production, styling, and photography teams across 21+ editorial shoots and 15+ onsite activations, from mood board & scripting to styling. Scripted influencer and talent-led content for major launches, and led on-ground creative direction for brand events.",
+    tag: "Production Coordination | Amazon Fashion",
+    body: "Coordinated with production, styling, and photography teams across 21+ editorial shoots and 15+ onsite activations, from mood board and scripting to styling. Scripted influencer and talent-led content for major launches, and led on-ground creative direction for brand events.",
     roles: [
       "Production & Styling Coordination",
       "Scriptwriting",
@@ -60,11 +60,10 @@ export const PROJECTS = [
       "Talent Coordination",
     ],
     impact: "21+ shoots and 15+ live activations led end-to-end.",
-    grid: "grid gap-4 sm:grid-cols-2 lg:grid-cols-3",
-    aspect: "aspect-[4/3]",
+    cols: "columns-1 sm:columns-2 lg:columns-3",
     media: [
       { type: "image", src: `${ASSET_BASE_A}/vjiusvgx_2-onset-bts-a.png`, label: "2-onset-bts-a" },
-      { type: "image", src: `${ASSET_BASE_B}/um946wyj_2-onset-bts-b.png`, label: "2-onset-bts-b", position: "object-top" },
+      { type: "image", src: `${ASSET_BASE_B}/um946wyj_2-onset-bts-b.png`, label: "2-onset-bts-b" },
       { type: "youtube", src: yt("kGli_grpDVE"), label: "Launch film" },
       { type: "youtube", src: yt("09xZPtZlV_s"), label: "Launch film" },
       { type: "youtube", src: yt("nAG6yyFEEH8"), label: "Launch film" },
@@ -74,9 +73,9 @@ export const PROJECTS = [
   {
     id: "serve",
     number: "03",
-    title: "Serve — Amazon Fashion's Gen Z Platform",
-    tag: "0→1 Brand & Platform Build — Amazon Fashion",
-    body: "Amazon Fashion had no dedicated space for its fastest-growing customer segment - Gen Z, over 45% of active buyers. I led the 0-to-1 strategy for Serve: commissioned primary and secondary research into how Gen Z actually shops and speaks, then built the brand name, voice, brand book, platform experience, and content ecosystem end to end — extending it across social, CRM, creator content, and cross-platform placements like Hip Hop India.",
+    title: "Serve: Amazon Fashion's Gen Z Platform",
+    tag: "0→1 Brand & Platform Build | Amazon Fashion",
+    body: "Amazon Fashion had no dedicated space for its fastest-growing customer segment: Gen Z, over 45% of active buyers. I led the 0-to-1 strategy for Serve, commissioning primary and secondary research into how Gen Z actually shops and speaks, then building the brand name, voice, brand book, platform experience, and content ecosystem end to end. I extended it across social, CRM, creator content, and cross-platform placements like Hip Hop India.",
     roles: [
       "Naming & Brand Strategy",
       "Primary Research",
@@ -84,8 +83,7 @@ export const PROJECTS = [
       "Social & CRM Extension",
     ],
     impact: "2X engagement, +40% OPS, +170% CTR.",
-    grid: "grid gap-4 sm:grid-cols-2",
-    aspect: "aspect-[3/4]",
+    cols: "columns-1 sm:columns-2",
     media: [
       { type: "video", src: "/media/w8wxgvix_3-serve-landingpage-a.mp4", poster: "/media/posters/serve-a.jpg", label: "3-serve-landingpage-a" },
       { type: "image", src: "/media/3-serve-landingpage-b.gif", label: "3-serve-landingpage-b" },
@@ -96,28 +94,28 @@ export const PROJECTS = [
   {
     id: "myntra",
     number: "04",
-    title: "Myntra — Owning Festival & Sale Content Strategy",
-    tag: "Content Strategy Lead — Myntra (Current)",
+    title: "Owning Festival & Sale Content Strategy",
+    tag: "Content Strategy Lead | Myntra (Current)",
     body: "Leading content strategy and communication for Myntra's major fashion events and commercial moments, including the Myntra Big Fashion Festival, translating business goals and consumer insight into campaign narratives, messaging, and onsite experiences. Also lead CRM content strategy across customer segments, tailoring communication by audience, journey stage, and business objective.",
     roles: [
       "Content Strategy",
       "Campaign Narrative",
       "CRM Messaging",
       "Cross-Functional Alignment",
+      "AI-Assisted Trend & Content Analysis",
     ],
     impact: null,
-    grid: "grid gap-4 sm:grid-cols-2",
-    aspect: "aspect-[16/10]",
+    cols: "columns-1 sm:columns-2",
     media: [
       { type: "image", src: `${ASSET_BASE_B}/e6hg8rpr_4-myntra-a.png`, label: "4-myntra-a" },
-      { type: "image", src: `${ASSET_BASE_B}/d6uj4f12_4-myntra-b.jpg`, label: "4-myntra-b", position: "object-top" },
+      { type: "image", src: `${ASSET_BASE_B}/d6uj4f12_4-myntra-b.jpg`, label: "4-myntra-b" },
     ],
   },
   {
     id: "social-crm",
     number: "05",
-    title: "Social, CRM & Brand Communication — Turning Content Into Numbers",
-    tag: "Social Strategy, CRM & PR — Amazon Fashion",
+    title: "Social, CRM & Brand Communication: Turning Content Into Numbers",
+    tag: "Social Strategy, CRM & PR | Amazon Fashion",
     body: "Owned organic social strategy end to end, scripting, shooting, and posting from a phone, chasing trends before they cooled, and turning brand moments into scroll-stopping content. Extended that same insight-led approach into CRM messaging, PR storytelling, and on-ground brand experiences like Amazon Diwali Bash and Amazon Creator Connect, plus creative copy for limited-edition packaging.",
     roles: [
       "Social Strategy & Content",
@@ -127,8 +125,7 @@ export const PROJECTS = [
     ],
     impact:
       "Organic content views grew 3x (avg 8K → 30K). Social engagement tripled in H2'24 (262 → 803). Creative brief compliance improved from 55.86% to 98.6%.",
-    grid: "grid gap-4 sm:grid-cols-2",
-    aspect: "aspect-[4/3]",
+    cols: "columns-1 sm:columns-2",
     media: [
       { type: "image", src: `${ASSET_BASE_A}/u7on7pra_5-social-a.webp`, label: "5-social-a" },
       { type: "image", src: `${ASSET_BASE_B}/6gi41qob_5-social-b.webp`, label: "5-social-b" },

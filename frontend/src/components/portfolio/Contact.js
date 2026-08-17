@@ -23,13 +23,13 @@ export const Contact = () => (
       </Reveal>
 
       <Reveal delay={0.15}>
-        <div className="mt-16 flex flex-col items-center justify-center gap-10 md:mt-24 md:flex-row md:gap-20">
+        <div className="mx-auto mt-16 grid max-w-4xl grid-cols-1 items-start justify-items-center gap-10 md:mt-24 md:grid-cols-3 md:gap-8">
           {CONTACT_LINKS.map((l) => (
             <a
               key={l.label}
               href={l.href}
               data-testid={l.testid}
-              className="group"
+              className="group w-full text-center"
               {...(l.label === "LinkedIn"
                 ? { target: "_blank", rel: "noopener noreferrer" }
                 : {})}

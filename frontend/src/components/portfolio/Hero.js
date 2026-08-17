@@ -29,7 +29,7 @@ export const Hero = () => {
           transition={{ duration: 0.8, delay: 0.9, ease: "easeOut" }}
           className="mb-6 text-xs font-medium uppercase tracking-[0.25em] text-plum md:text-sm"
         >
-          Creative Strategist — Brand, Content &amp; Conversion
+          Creative Strategist | Brand, Content &amp; Conversion
         </motion.p>
 
         <h1
@@ -102,7 +102,11 @@ export const Hero = () => {
                 i === 2 ? "max-md:border-l-0 max-md:border-t max-md:border-line" : ""
               } ${i === 3 ? "max-md:border-t max-md:border-line" : ""}`}
             >
-              <p className="font-serif text-4xl tracking-tight text-ink md:text-5xl">
+              <p
+                className={`whitespace-nowrap font-serif tracking-tight text-ink ${
+                  s.small ? "text-3xl md:text-4xl" : "text-4xl md:text-5xl"
+                }`}
+              >
                 {s.value}
               </p>
               <p className="mt-2 text-[11px] font-medium uppercase tracking-[0.2em] text-muted">
