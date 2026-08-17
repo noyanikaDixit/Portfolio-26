@@ -8,7 +8,7 @@ import { Work } from "@/components/portfolio/Work";
 import { ExploreMore } from "@/components/portfolio/ExploreMore";
 import { About } from "@/components/portfolio/About";
 import { Contact } from "@/components/portfolio/Contact";
-import { MusicButton } from "@/components/portfolio/MusicButton";
+import { Lightbox } from "@/components/portfolio/Lightbox";
 
 function App() {
   useEffect(() => {
@@ -38,7 +38,7 @@ function App() {
         <About />
         <Contact />
       </main>
-      <MusicButton />
+      <Lightbox />
     </div>
   );
 }

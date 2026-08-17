@@ -1,4 +1,7 @@
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { Volume2 } from "lucide-react";
+import { openLightbox } from "@/components/portfolio/Lightbox";
 import { HEADSHOT, STATS } from "@/data/content";
 
 const MaskedLine = ({ children, delay = 0 }) => (
@@ -15,6 +18,17 @@ const MaskedLine = ({ children, delay = 0 }) => (
 );
 
 export const Hero = () => {
+  const audioRef = useRef(null);
+  const [playing, setPlaying] = useState(false);
+
+  const playName = () => {
+    const a = audioRef.current;
+    if (!a) return;
+    a.currentTime = 0;
+    a.play();
+    setPlaying(true);
+  };
+
   return (
     <section
       id="home"
@@ -32,14 +46,39 @@ export const Hero = () => {
           Creative Strategist | Brand, Content &amp; Conversion
         </motion.p>
 
-        <h1
-          data-testid="hero-headline"
-          className="whitespace-nowrap font-serif text-[clamp(2.4rem,8vw,8rem)] leading-[0.95] tracking-tighter"
-        >
-          <MaskedLine delay={0.1}>
-            Noyanika <span className="italic text-plum">Dixit</span>
-          </MaskedLine>
-        </h1>
+        <div className="flex items-center justify-center gap-4 md:gap-6">
+          <h1
+            data-testid="hero-headline"
+            className="whitespace-nowrap font-serif text-[clamp(2.4rem,8vw,8rem)] leading-[0.95] tracking-tighter"
+          >
+            <MaskedLine delay={0.1}>
+              Noyanika <span className="italic text-plum">Dixit</span>
+            </MaskedLine>
+          </h1>
+          <motion.button
+            type="button"
+            data-testid="name-pronunciation-button"
+            onClick={playName}
+            aria-label="Hear name pronunciation"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 1.3, ease: "easeOut" }}
+            className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full border transition-colors duration-300 md:h-12 md:w-12 ${
+              playing
+                ? "border-plum bg-plum text-cream"
+                : "border-plum/30 text-plum hover:bg-plum-light"
+            }`}
+          >
+            <Volume2 size={18} />
+          </motion.button>
+        </div>
+
+        <audio
+          ref={audioRef}
+          src="/media/name-pronunciation.m4a"
+          preload="auto"
+          onEnded={() => setPlaying(false)}
+        />
 
         <motion.p
           data-testid="hero-tagline"
@@ -80,9 +119,10 @@ export const Hero = () => {
               src={HEADSHOT}
               alt="Noyanika Dixit"
               data-testid="hero-headshot"
+              onClick={() => openLightbox(HEADSHOT, "Noyanika Dixit")}
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="relative aspect-square w-60 rounded-full object-cover md:w-80"
+              className="relative aspect-square w-60 cursor-zoom-in rounded-full object-cover md:w-80"
             />
           </div>
         </motion.div>

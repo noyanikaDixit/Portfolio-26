@@ -169,7 +169,7 @@ export const EXPLORE = [
     body: "A long-form content experiment that brought storytelling, style, and shopping together in one glossy moment. This vacation-themed issue covered everything from effortless fashion to easy beauty tips to destination-ready looks. Over 5,000 copies were distributed free with customer orders across metro cities, cementing Amazon Fashion's image as a fashion-first platform. I helped shape the content mix and product curation, ensuring every page blended editorial storytelling with seamless product integration.",
     media: [
       { type: "video", src: "/media/kaots6du_explore1-magazine-a.mp4", poster: "/media/posters/magazine-a.jpg", label: "explore1-magazine-a" },
-      { type: "placeholder", label: "explore1-magazine-b" },
+      { type: "image", src: "/media/explore1-magazine-b.gif", label: "explore1-magazine-b" },
     ],
   },
   {
@@ -178,13 +178,13 @@ export const EXPLORE = [
     title: "Wildcraft x Amazon Fashion: The Great Outdoors",
     body: "In a campaign that celebrated the spirit of adventure, Amazon Fashion launched Wildcraft with a dedicated on-site store and multi-channel push. From durable hiking gear to adventure-ready essentials, the campaign brought the great outdoors closer to customers through engaging storytelling, social buzz, and immersive on-site experiences.",
     media: [
-      { type: "placeholder", label: "explore2-wildcraft-a" },
+      { type: "video", src: "/media/fhcsffhc_explore2-wildcraft-a.mp4", poster: "/media/posters/wildcraft-a.jpg", label: "explore2-wildcraft-a" },
       {
         type: "link",
         src: "https://www.instagram.com/p/DFfAjzXy7cY/?igsh=MW9panAzd2dsZGM1dA%3D%3D",
         label: "Instagram Post",
         sub: "Wildcraft x Amazon Fashion",
-        thumb: null,
+        thumb: "/media/explore2-wildcraft-b.png",
       },
     ],
   },

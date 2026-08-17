@@ -40,11 +40,15 @@ Minimal, editorial one-page portfolio for a creative strategist ("more design st
 - Videos served locally from /public/media (H.264, portrait, verified)
 
 ## Backlog
-- P0: Missing Explore More images: explore1-magazine-b, explore2-wildcraft-a, explore2-wildcraft-b (IG cover) — slots ready
-- P0: Background music audio file (/public/media/background-audio.mp3) — button is wired, waiting on upload
 - P1: Claude AI integration — user asked for it (2026-08-17); awaiting their pick of use case (chat assistant vs pitch generator) and model (Sonnet 4.6 vs Haiku 4.5); will need integration_expert + FastAPI route
 - P2: favicon
 - P2: custom domain once deployed externally
+
+## Notes
+- Name pronunciation: /media/name-pronunciation.m4a, speaker button beside hero name, click-to-play once
+- Site-wide image lightbox: openLightbox custom event (Lightbox.js); all gallery/Explore images + headshot clickable
+- Background music feature was added then removed at user request (2026-08-17)
+- Explore More fully populated: magazine (video + GIF), wildcraft (video + IG post card with cover)
 
 ## Test Credentials
 - No auth — see /app/memory/test_credentials.md (empty by design)

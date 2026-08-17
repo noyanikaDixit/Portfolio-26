@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { ArrowUpRight, Image as ImageIcon, Instagram, Play } from "lucide-react";
 import { Reveal, SectionHeading } from "@/components/portfolio/Reveal";
+import { openLightbox } from "@/components/portfolio/Lightbox";
 import { PROJECTS } from "@/data/content";
 
 export const PlaceholderSlot = ({ label, aspect, testid }) => (
@@ -103,7 +104,14 @@ export const MediaItem = ({ item, aspect, testid }) => {
     return <VideoTile item={item} aspect={aspect} testid={testid} />;
   if (item.type === "image") {
     return (
-      <div className={`overflow-hidden rounded-md border border-line ${aspect}`}>
+      <div
+        role="button"
+        tabIndex={0}
+        aria-label={`View ${item.label} full size`}
+        onClick={() => openLightbox(item.src, item.label)}
+        onKeyDown={(e) => e.key === "Enter" && openLightbox(item.src, item.label)}
+        className={`cursor-zoom-in overflow-hidden rounded-md border border-line ${aspect}`}
+      >
         <img
           src={item.src}
           alt={item.label}
