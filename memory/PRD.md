@@ -45,6 +45,11 @@ Minimal, editorial one-page portfolio for a creative strategist ("more design st
 - P2: custom domain once deployed externally
 
 ## Notes
+- Fonts locked to exactly two: Playfair Display (headlines) + Inter (everything else); last stray mono removed
+- Impact sections are bulleted stat lists (per user-supplied breakdown, 2026-08-17)
+- Resume PDF replaced with latest version (same URL /media/Noyanika-Dixit-Resume.pdf)
+- LinkedIn contact displays as "My Profile" label
+- OG share card: /public/og-image.jpg + meta tags in index.html; viewable standalone at /og-image.jpg
 - Desktop layout rework (2026-08-17): unified 1320px content container (nav, hero, work, explore, about, contact); Role/Impact sidebar is now a plum-tinted card stretched to match text column height; gallery gap reduced (mt-8); grids widened (P1/P3/P4/P5 lg:4-col, P2 lg:3-col) with gap-5 gutters, rounded corners + subtle shadows on every tile
 - Name pronunciation: /media/name-pronunciation.m4a, speaker button beside hero name, click-to-play once
 - Site-wide image lightbox: openLightbox custom event (Lightbox.js); all gallery/Explore images + headshot clickable

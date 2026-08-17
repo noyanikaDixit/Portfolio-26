@@ -13,7 +13,7 @@ export const PlaceholderSlot = ({ label, aspect, testid }) => (
   >
     <div>
       <ImageIcon className="mx-auto mb-3 text-plum/40" size={22} />
-      <p className="font-mono text-xs text-plum/70">{label}</p>
+      <p className="text-xs font-medium text-plum/70">{label}</p>
       <p className="mt-1 text-[10px] font-medium uppercase tracking-[0.2em] text-muted">
         Awaiting upload
       </p>
@@ -186,12 +186,20 @@ const ProjectCard = ({ project }) => (
                 <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-plum/70">
                   Impact
                 </p>
-                <p
+                <ul
                   data-testid={`project-${project.id}-impact`}
-                  className="mt-3 font-serif text-lg font-semibold leading-snug text-plum"
+                  className="mt-3 space-y-2.5"
                 >
-                  {project.impact}
-                </p>
+                  {project.impact.map((point) => (
+                    <li
+                      key={point}
+                      className="flex items-start gap-3 font-serif text-lg font-semibold leading-snug text-plum"
+                    >
+                      <span className="mt-[0.55em] h-1.5 w-1.5 shrink-0 rounded-full bg-plum" />
+                      {point}
+                    </li>
+                  ))}
+                </ul>
               </div>
             )}
           </div>

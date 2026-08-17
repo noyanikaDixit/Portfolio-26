@@ -37,8 +37,10 @@ export const PROJECTS = [
       "Cross-Category Strategy",
       "Performance Analysis",
     ],
-    impact:
-      "Reduced bounce rate and increased conversion by 500bps. CTR gains of 250–366% across campaigns.",
+    impact: [
+      "Reduced bounce rate and increased conversion by 500bps",
+      "CTR gains of 250–366% across campaigns",
+    ],
     grid: "grid gap-5 sm:grid-cols-2 lg:grid-cols-4",
     aspect: "aspect-[3/4]",
     media: [
@@ -60,7 +62,10 @@ export const PROJECTS = [
       "On-Ground Creative Direction",
       "Talent Coordination",
     ],
-    impact: "21+ shoots and 15+ live activations led end-to-end.",
+    impact: [
+      "21+ editorial shoots led end-to-end",
+      "15+ live activations led end-to-end",
+    ],
     grid: "grid gap-5 sm:grid-cols-2 lg:grid-cols-3",
     aspect: "aspect-[4/3]",
     media: [
@@ -84,7 +89,7 @@ export const PROJECTS = [
       "Wireframe & Content Direction",
       "Social & CRM Extension",
     ],
-    impact: "2X engagement, +40% OPS, +170% CTR.",
+    impact: ["2X engagement", "+40% OPS", "+170% CTR"],
     grid: "grid gap-5 sm:grid-cols-2 lg:grid-cols-4",
     aspect: "aspect-[3/4]",
     media: [
@@ -108,14 +113,16 @@ export const PROJECTS = [
       "AI-Assisted Trend & Content Analysis",
       "Vernacular & Regional Language Content Adaptation",
     ],
-    impact:
-      "4.33% CTR on major sale banners, 73% above the 2.5% industry benchmark.",
+    impact: [
+      "4.33% CTR on major sale banners",
+      "73% above the 2.5% industry benchmark",
+    ],
     grid: "grid gap-5 sm:grid-cols-2 lg:grid-cols-4",
     aspect: "aspect-[4/3]",
     media: [
       { type: "image", src: `${ASSET_BASE_B}/3bfl36s7_4-myntra-a.png`, label: "4-myntra-a" },
       { type: "image", src: `${ASSET_BASE_B}/vsou1x59_4-myntra-b.png`, label: "4-myntra-b" },
-      { type: "image", src: `${ASSET_BASE_B}/gvrwzks8_4-myntra-c.png`, label: "4-myntra-c" },
+      { type: "image", src: `${ASSET_BASE_B}/2rd6j38v_4-myntra-c.png`, label: "4-myntra-c" },
       { type: "image", src: `${ASSET_BASE_B}/o1adxc0w_4-myntra-d.jpg`, label: "4-myntra-vernacular" },
     ],
   },
@@ -131,8 +138,11 @@ export const PROJECTS = [
       "PR Writing",
       "Brand Event Execution",
     ],
-    impact:
-      "Organic content views grew 3x (avg 8K → 30K). Social engagement tripled in H2'24 (262 → 803). Creative brief compliance improved from 55.86% to 98.6%.",
+    impact: [
+      "Organic content views grew 3x (avg 8K → 30K)",
+      "Social engagement tripled in H2'24 (262 → 803)",
+      "Creative brief compliance improved from 55.86% to 98.6%",
+    ],
     grid: "grid gap-5 sm:grid-cols-2 lg:grid-cols-4",
     aspect: "aspect-[4/3]",
     media: [
@@ -198,5 +208,5 @@ export const RESUME_URL = "/media/Noyanika-Dixit-Resume.pdf";
 export const CONTACT_LINKS = [
   { label: "Email", value: "noyanikadixit@gmail.com", href: "mailto:noyanikadixit@gmail.com", testid: "contact-email-link" },
   { label: "Phone", value: "+91-8795790773", href: "tel:+918795790773", testid: "contact-phone-link" },
-  { label: "LinkedIn", value: "linkedin.com/in/noyanika-dixit-258bb815b", href: "https://www.linkedin.com/in/noyanika-dixit-258bb815b/", testid: "contact-linkedin-link" },
+  { label: "LinkedIn", value: "My Profile", href: "https://www.linkedin.com/in/noyanika-dixit-258bb815b/", testid: "contact-linkedin-link" },
 ];
